@@ -47,8 +47,8 @@ Output: [3,4,6,16,17]
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 12.7 MB (beats 10.74%)  
-**Submitted:** 2026-11-20T14:55:17.739Z  
+**Memory:** 12.5 MB (beats 44.45%)  
+**Submitted:** 2026-11-20T14:55:59.079Z  
 
 ```cpp
 class Solution {
