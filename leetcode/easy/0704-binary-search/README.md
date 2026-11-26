@@ -43,31 +43,33 @@ Explanation: 2 does not exist in nums so return -1
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 31.3 MB (beats 31.02%)  
-**Submitted:** 2026-11-20T14:49:53.725Z  
+**Memory:** 31.2 MB (beats 61.60%)  
+**Submitted:** 2026-11-26T04:37:38.508Z  
 
 ```cpp
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
         int left = 0;
-        int right = nums.size() - 1; 
-        
+        int right = nums.size() - 1;
+
         while (left <= right) {
-            int mid = left + (right - left) / 2; 
-            
+            int mid = left + (right - left) / 2;
+
             if (nums[mid] == target) {
-                return mid; 
-            } else if (nums[mid] < target) {
-                left = mid + 1; 
-            } else {
-                right = mid - 1; 
+                return mid;
+            }
+            else if (nums[mid] < target) {
+                left = mid + 1;
+            }
+            else {
+                right = mid - 1;
             }
         }
+
         return -1;
     }
 };
-
 ```
 
 ---
