@@ -49,32 +49,30 @@ Output: 4
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 13.6 MB (beats 78.65%)  
-**Submitted:** 2026-11-20T15:27:37.314Z  
+**Memory:** 13.6 MB (beats 38.91%)  
+**Submitted:** 2026-11-26T04:44:05.830Z  
 
 ```cpp
-#include <vector>
-using namespace std;
-
 class Solution {
 public:
     int searchInsert(vector<int>& nums, int target) {
         int left = 0;
         int right = nums.size() - 1;
-        
+
         while (left <= right) {
             int mid = left + (right - left) / 2;
-            
+
             if (nums[mid] == target) {
                 return mid;
-            } else if (nums[mid] < target) {
+            }
+            else if (nums[mid] < target) {
                 left = mid + 1;
-            } else {
+            }
+            else {
                 right = mid - 1;
             }
         }
-        
-        // If the target is not found, 'left' is the correct insert position
+
         return left;
     }
 };
