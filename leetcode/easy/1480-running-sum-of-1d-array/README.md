@@ -47,16 +47,15 @@ Output: [3,4,6,16,17]
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 12.5 MB (beats 44.45%)  
-**Submitted:** 2026-11-20T14:55:59.079Z  
+**Memory:** 12.5 MB (beats 43.04%)  
+**Submitted:** 2026-11-26T04:39:31.398Z  
 
 ```cpp
 class Solution {
 public:
     vector<int> runningSum(vector<int>& nums) {
-        // Start from the second element and accumulate the sum in-place
-        for (int i = 1; i < nums.size(); ++i) {
-            nums[i] += nums[i - 1];
+        for (int i = 1; i < nums.size(); i++) {
+            nums[i] = nums[i] + nums[i - 1];
         }
         return nums;
     }
