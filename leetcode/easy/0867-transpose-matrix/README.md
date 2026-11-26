@@ -41,31 +41,26 @@ Output: [[1,4],[2,5],[3,6]]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1 ms (beats 13.49%)  
-**Memory:** 15.1 MB (beats 26.74%)  
-**Submitted:** 2026-11-20T15:21:23.066Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 14.8 MB (beats 99.36%)  
+**Submitted:** 2026-11-26T04:41:05.544Z  
 
 ```cpp
-#include <vector>
-using namespace std;
-
 class Solution {
 public:
     vector<vector<int>> transpose(vector<vector<int>>& matrix) {
-        int R = matrix.size();       // Number of rows
-        int C = matrix[0].size();    // Number of columns
-        
-        // Initialize the result matrix with swapped dimensions (C x R)
-        vector<vector<int>> transposed(C, vector<int>(R));
-        
-        // Iterate through the original matrix and place values in transposed positions
-        for (int i = 0; i < R; ++i) {
-            for (int j = 0; j < C; ++j) {
-                transposed[j][i] = matrix[i][j];
+        int m = matrix.size();
+        int n = matrix[0].size();
+
+        vector<vector<int>> ans(n, vector<int>(m));
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                ans[j][i] = matrix[i][j];
             }
         }
-        
-        return transposed;
+
+        return ans;
     }
 };
 ```
